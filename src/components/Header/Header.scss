@@ -1,0 +1,54 @@
+$main-font: 'Red Hat Text', sans-serif;
+$primary-color: #30336b;
+$secondary-color: #be2edd;
+
+.header {
+  position: relative;
+  height: 100vh;
+  padding: 100px 20px;
+  color: #fff;
+  background: url('../../assets/sea.jpg');
+  background-size: cover;
+  background-position: right 20% center;
+  background-attachment: fixed;
+  text-align: center;
+
+  * {
+    z-index: 1;
+  }
+
+  &__open-sidebar-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 4px 8px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 2.5rem;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    font-size: 3rem;
+  }
+
+  &__subtitle {
+    margin: 0 0 60px;
+  }
+
+  &__open-modal-button {
+    color: #fff;
+    background-color: $secondary-color;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

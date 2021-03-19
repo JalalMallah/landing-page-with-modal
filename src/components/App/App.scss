@@ -1,0 +1,42 @@
+$main-font: 'Red Hat Text', sans-serif;
+$primary-color: #30336b;
+$secondary-color: #be2edd;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: $main-font;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.6rem;
+  background-color: #f4f4f4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-family: $main-font;
+  font-size: 1.6rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
