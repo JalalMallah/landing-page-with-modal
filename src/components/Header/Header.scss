@@ -45,14 +45,14 @@ $secondary-color: #be2edd;
 
 .header__scroll-icon {
   position: absolute;
-  bottom: 50px;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  width: 40px;
-  height: 80px;
+  width: 30px;
+  height: 60px;
   border: 3px solid #fff;
-  border-radius: 20px;
+  border-radius: 15px;
   animation: show-scroll-icon 1s 1s ease both;
 }
 
