@@ -7,9 +7,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './Header.scss';
 
 const Header = () => {
-  const { toggleSidebarVisibility } = useContext(AppContext);
-
-  const handleOpenModalClick = () => console.log('open modal');
+  const { toggleModalVisibility, toggleSidebarVisibility } = useContext(AppContext);
 
   return (
     <>
@@ -21,7 +19,7 @@ const Header = () => {
         <p className='header__subtitle'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, ea!
         </p>
-        <button className='header__open-modal-button' onClick={handleOpenModalClick}>
+        <button className='header__open-modal-button' onClick={toggleModalVisibility}>
           Sign Up
         </button>
         <div className='header__scroll-icon'>
