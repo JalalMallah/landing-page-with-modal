@@ -38,7 +38,31 @@ $secondary-color: #be2edd;
 
   &__open-modal-button {
     color: #fff;
+    font-size: 2rem;
     background-color: $secondary-color;
+  }
+
+  &__scroll-icon {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 80px;
+    border: 3px solid #fff;
+    border-radius: 20px;
+  }
+
+  &__moving-scroll-circle {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: circle-scroll 2s infinite ease;
   }
 
   &::after {
@@ -50,5 +74,21 @@ $secondary-color: #be2edd;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes circle-scroll {
+  0% {
+    top: 10%;
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 70%;
+    opacity: 0;
   }
 }

@@ -21,6 +21,9 @@ const Header = () => {
         <button className='header__open-modal-button' onClick={handleOpenModalClick}>
           Sign Up
         </button>
+        <div className='header__scroll-icon'>
+          <span className='header__moving-scroll-circle'></span>
+        </div>
       </header>
     </>
   );
