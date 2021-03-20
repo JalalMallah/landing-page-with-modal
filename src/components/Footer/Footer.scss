@@ -19,3 +19,23 @@ $secondary-color: #be2edd;
     cursor: pointer;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 30px 100px;
+  }
+
+  .footer__icon {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 30px 250px;
+  }
+
+  .footer__icon {
+    font-size: 3.2rem;
+  }
+}

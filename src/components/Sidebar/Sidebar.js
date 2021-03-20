@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { AppContext } from 'context';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -21,8 +21,8 @@ const App = () => {
         <Header />
         <Route path='/' exact component={Main} />
         <Route path='/portfolio' component={Portfolio} />
-        <Route path='/blog' exact component={Blog} />
-        <Route path='/contact' exact component={Contact} />
+        <Route path='/blog' component={Blog} />
+        <Route path='/contact' component={Contact} />
         <Footer />
         <Modal />
       </AppProvider>

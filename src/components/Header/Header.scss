@@ -4,8 +4,12 @@ $secondary-color: #be2edd;
 
 .header {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   height: 100vh;
-  padding: 50px 20px;
+  padding: 40px 20px 180px;
   color: #fff;
   background: url('../../assets/painting.jpg');
   background-size: cover;
@@ -32,18 +36,15 @@ $secondary-color: #be2edd;
 .header__hero-image-container {
   width: 80%;
   max-width: 500px;
-  margin: 20px auto;
   animation: fade-in 1s 1s both ease;
 }
 
 .header__title {
-  margin: 0 0 30px;
   font-size: 3rem;
   animation: fade-in 1s 1.5s both ease;
 }
 
 .header__subtitle {
-  margin: 0 0 30px;
   animation: fade-in 1s 2s both ease;
 }
 
@@ -56,7 +57,7 @@ $secondary-color: #be2edd;
 
 .header__scroll-icon {
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -89,6 +90,119 @@ $secondary-color: #be2edd;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 640px) and (orientation: landscape) {
+  .header {
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .header__hero-image-container {
+    width: 30%;
+    margin: 0 0 10px;
+  }
+
+  .header__title,
+  .header__subtitle {
+    margin: 0 0 15px;
+  }
+
+  .header__subtitle {
+    font-weight: 500;
+  }
+
+  .header__scroll-icon {
+    bottom: 5%;
+    left: 10%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 80px 40px 250px;
+  }
+
+  .header__open-sidebar-button {
+    font-size: 3rem;
+  }
+
+  .header__title {
+    font-size: 4.4rem;
+  }
+
+  .header__subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .header__open-modal-button {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  .header {
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .header__hero-image-container {
+    width: 30%;
+    margin: 0 0 10px;
+  }
+
+  .header__title {
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+  }
+
+  .header__subtitle {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .header__scroll-icon {
+    bottom: 5%;
+    left: 10%;
+  }
+
+  .header__open-modal-button {
+    padding: 10px 15px;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    justify-content: space-evenly;
+    padding: 50px 50px 200px;
+  }
+
+  .header__hero-image-container {
+    width: 45%;
+  }
+
+  .header__title {
+    font-size: 4rem;
+  }
+
+  .header__subtitle {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+
+  .header__open-modal-button {
+    padding: 15px 25px;
+    font-size: 2.5rem;
+  }
+
+  .header__scroll-icon {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes fade-in {
