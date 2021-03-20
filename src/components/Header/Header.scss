@@ -12,69 +12,69 @@ $secondary-color: #be2edd;
   background-position: right 20% center;
   background-attachment: fixed;
   text-align: center;
+}
 
-  * {
-    z-index: 1;
-  }
+.header * {
+  z-index: 1;
+}
 
-  &__open-sidebar-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 4px 8px;
-    color: #fff;
-    background-color: transparent;
-    font-size: 2.5rem;
-  }
+.header__open-sidebar-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 4px 8px;
+  color: #fff;
+  background-color: transparent;
+  font-size: 2.5rem;
+}
 
-  &__title {
-    margin: 0 0 30px;
-    font-size: 3rem;
-  }
+.header__title {
+  margin: 0 0 30px;
+  font-size: 3rem;
+}
 
-  &__subtitle {
-    margin: 0 0 60px;
-  }
+.header__subtitle {
+  margin: 0 0 60px;
+}
 
-  &__open-modal-button {
-    color: #fff;
-    font-size: 2rem;
-    background-color: $secondary-color;
-  }
+.header__open-modal-button {
+  color: #fff;
+  font-size: 2rem;
+  background-color: $secondary-color;
+}
 
-  &__scroll-icon {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 80px;
-    border: 3px solid #fff;
-    border-radius: 20px;
-  }
+.header__scroll-icon {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 80px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+}
 
-  &__moving-scroll-circle {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #fff;
-    animation: circle-scroll 2s infinite ease;
-  }
+.header__moving-scroll-circle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: circle-scroll 2s infinite ease;
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
+.header::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 @keyframes circle-scroll {
