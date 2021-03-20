@@ -1,17 +1,20 @@
-import React from 'react';
+import { useContext } from 'react';
+import { AppContext } from 'context';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import './Header.scss';
 
 const Header = () => {
-  const handleOpenSidebarClick = () => console.log('open sidebar');
+  const { toggleSidebarVisibility } = useContext(AppContext);
+
   const handleOpenModalClick = () => console.log('open modal');
 
   return (
     <>
       <header className='header'>
-        <button className='header__open-sidebar-button' onClick={handleOpenSidebarClick}>
+        <button className='header__open-sidebar-button' onClick={toggleSidebarVisibility}>
           <FontAwesomeIcon icon={faBars} />
         </button>
         <h1 className='header__title'>My Landing Page 👨‍💻</h1>

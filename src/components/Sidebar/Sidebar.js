@@ -1,11 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import { useContext } from 'react';
+import { AppContext } from 'context';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import './Sidebar.scss';
 
 const Sidebar = () => {
+  const { isSidebarVisible, toggleSidebarVisibility } = useContext(AppContext);
+
+  const sidebarClassName = isSidebarVisible ? 'sidebar sidebar--visible' : 'sidebar';
+
   const getImageSource = () => {
     const genders = ['women', 'men'];
     const randomGender = ~~(Math.random() * 2);
@@ -15,12 +21,10 @@ const Sidebar = () => {
     return baseURL;
   };
 
-  const handleCloseSidebarClick = () => console.log('close sidebar');
-
   return (
     <>
-      <nav className='sidebar'>
-        <button className='sidebar__close-sidebar-button' onClick={handleCloseSidebarClick}>
+      <nav className={sidebarClassName}>
+        <button className='sidebar__close-sidebar-button' onClick={toggleSidebarVisibility}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
         <div className='sidebar__image-container'>
