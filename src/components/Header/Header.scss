@@ -5,17 +5,18 @@ $secondary-color: #be2edd;
 .header {
   position: relative;
   height: 100vh;
-  padding: 100px 20px;
+  padding: 50px 20px;
   color: #fff;
-  background: url('../../assets/sea.jpg');
+  background: url('../../assets/painting.jpg');
   background-size: cover;
-  background-position: right 20% center;
+  background-position: center center;
   background-attachment: fixed;
   text-align: center;
 }
 
 .header * {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .header__open-sidebar-button {
@@ -28,19 +29,29 @@ $secondary-color: #be2edd;
   font-size: 2.5rem;
 }
 
+.header__hero-image-container {
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  animation: fade-in 1s 1s both ease;
+}
+
 .header__title {
   margin: 0 0 30px;
   font-size: 3rem;
+  animation: fade-in 1s 1.5s both ease;
 }
 
 .header__subtitle {
-  margin: 0 0 60px;
+  margin: 0 0 30px;
+  animation: fade-in 1s 2s both ease;
 }
 
 .header__open-modal-button {
   color: #fff;
   font-size: 2rem;
   background-color: $secondary-color;
+  animation: fade-in 1s 2.5s both ease;
 }
 
 .header__scroll-icon {
@@ -53,7 +64,7 @@ $secondary-color: #be2edd;
   height: 60px;
   border: 3px solid #fff;
   border-radius: 15px;
-  animation: show-scroll-icon 1s 1s ease both;
+  animation: fade-in 1s 3s ease both;
 }
 
 .header__moving-scroll-circle {
@@ -66,13 +77,13 @@ $secondary-color: #be2edd;
   height: 10px;
   border-radius: 50%;
   background-color: #fff;
-  animation: circle-scroll 2s 2s infinite ease;
+  animation: circle-scroll 2s 3s infinite ease;
 }
 
-.header::after {
+.header::before {
   content: '';
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -80,7 +91,7 @@ $secondary-color: #be2edd;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-@keyframes show-scroll-icon {
+@keyframes fade-in {
   from {
     opacity: 0;
   }

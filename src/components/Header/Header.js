@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { AppContext } from 'context';
 
+import illustration from 'assets/hero-illustration.svg';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +17,10 @@ const Header = () => {
         <button className='header__open-sidebar-button' onClick={toggleSidebarVisibility}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <h1 className='header__title'>My Landing Page 👨‍💻</h1>
+        <div className='header__hero-image-container'>
+          <img src={illustration} alt='hero' className='header__hero-image' />
+        </div>
+        <h1 className='header__title'>My Landing Page</h1>
         <p className='header__subtitle'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, ea!
         </p>
