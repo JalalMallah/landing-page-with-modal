@@ -86,3 +86,7 @@ $secondary-color: #be2edd;
     transform: scale(1);
   }
 }
+
+.sidebar__link--active {
+  color: $secondary-color;
+}

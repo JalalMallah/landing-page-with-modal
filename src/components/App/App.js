@@ -1,4 +1,5 @@
 import AppProvider from 'context';
+import { BrowserRouter } from 'react-router-dom';
 
 import Sidebar from 'components/Sidebar/Sidebar';
 import Header from 'components/Header/Header';
@@ -10,13 +11,15 @@ import './App.scss';
 
 const App = () => {
   return (
-    <AppProvider>
-      <Sidebar />
-      <Header />
-      <Main />
-      <Footer />
-      <Modal />
-    </AppProvider>
+    <BrowserRouter>
+      <AppProvider>
+        <Sidebar />
+        <Header />
+        <Main />
+        <Footer />
+        <Modal />
+      </AppProvider>
+    </BrowserRouter>
   );
 };
 

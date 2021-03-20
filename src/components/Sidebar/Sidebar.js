@@ -5,6 +5,8 @@ import { AppContext } from 'context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
+import { NavLink } from 'react-router-dom';
+
 import './Sidebar.scss';
 
 const Sidebar = () => {
@@ -32,24 +34,32 @@ const Sidebar = () => {
         </div>
         <ul className='sidebar__list'>
           <li className='sidebar__list-item'>
-            <a href='#' className='sidebar__link'>
+            <NavLink to='/' exact className='sidebar__link' activeClassName='sidebar__link--active'>
               Home
-            </a>
+            </NavLink>
           </li>
           <li className='sidebar__list-item'>
-            <a href='#' className='sidebar__link'>
+            <NavLink
+              to='/portfolio'
+              className='sidebar__link'
+              activeClassName='sidebar__link--active'
+            >
               Portfolio
-            </a>
+            </NavLink>
           </li>
           <li className='sidebar__list-item'>
-            <a href='#' className='sidebar__link'>
+            <NavLink to='/blog' className='sidebar__link' activeClassName='sidebar__link--active'>
               Blog
-            </a>
+            </NavLink>
           </li>
           <li className='sidebar__list-item'>
-            <a href='#' className='sidebar__link'>
+            <NavLink
+              to='/contact'
+              className='sidebar__link'
+              activeClassName='sidebar__link--active'
+            >
               Contact Me
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
