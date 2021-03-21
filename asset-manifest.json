@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/landing-page-with-modal/static/css/main.94bf5346.chunk.css",
+    "main.js": "/landing-page-with-modal/static/js/main.088339af.chunk.js",
+    "main.js.map": "/landing-page-with-modal/static/js/main.088339af.chunk.js.map",
+    "runtime-main.js": "/landing-page-with-modal/static/js/runtime-main.db5e7dd5.js",
+    "runtime-main.js.map": "/landing-page-with-modal/static/js/runtime-main.db5e7dd5.js.map",
+    "static/js/2.f22a0386.chunk.js": "/landing-page-with-modal/static/js/2.f22a0386.chunk.js",
+    "static/js/2.f22a0386.chunk.js.map": "/landing-page-with-modal/static/js/2.f22a0386.chunk.js.map",
+    "index.html": "/landing-page-with-modal/index.html",
+    "static/css/main.94bf5346.chunk.css.map": "/landing-page-with-modal/static/css/main.94bf5346.chunk.css.map",
+    "static/js/2.f22a0386.chunk.js.LICENSE.txt": "/landing-page-with-modal/static/js/2.f22a0386.chunk.js.LICENSE.txt",
+    "static/media/hero-illustration.ccd91ae0.svg": "/landing-page-with-modal/static/media/hero-illustration.ccd91ae0.svg",
+    "static/media/Header.scss": "/landing-page-with-modal/static/media/painting.142c229a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db5e7dd5.js",
+    "static/js/2.f22a0386.chunk.js",
+    "static/css/main.94bf5346.chunk.css",
+    "static/js/main.088339af.chunk.js"
+  ]
+}
