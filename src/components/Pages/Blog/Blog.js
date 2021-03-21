@@ -1,10 +1,14 @@
 import React from 'react';
+import { useContext } from 'react';
+import { AppContext } from 'context';
 
 import './Blog.scss';
 
 const Blog = () => {
+  const { sectionRef } = useContext(AppContext);
+
   return (
-    <section className='blog'>
+    <section className='blog' ref={sectionRef}>
       <h2 className='blog__title'>Blog</h2>
       <h3 className='blog__post-title'>Post #1</h3>
       <p className='blog__post-content'>

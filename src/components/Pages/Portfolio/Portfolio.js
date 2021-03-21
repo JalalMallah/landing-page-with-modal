@@ -1,10 +1,14 @@
 import React from 'react';
+import { useContext } from 'react';
+import { AppContext } from 'context';
 
 import './Portfolio.scss';
 
 const Portfolio = () => {
+  const { sectionRef } = useContext(AppContext);
+
   return (
-    <section className='portfolio'>
+    <section className='portfolio' ref={sectionRef}>
       <h2 className='portfolio__title'>Portfolio</h2>
       <p className='portfolio__text'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt optio labore blanditiis.

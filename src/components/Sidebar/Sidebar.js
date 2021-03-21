@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useContext, useRef } from 'react';
+import { useContext } from 'react';
 import { AppContext } from 'context';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,11 +10,9 @@ import { NavLink } from 'react-router-dom';
 import './Sidebar.scss';
 
 const Sidebar = () => {
-  const { isSidebarVisible, toggleSidebarVisibility } = useContext(AppContext);
+  const { isSidebarVisible, toggleSidebarVisibility, sectionRef } = useContext(AppContext);
 
   const sidebarClassName = isSidebarVisible ? 'sidebar sidebar--visible' : 'sidebar';
-
-  const sidebarRef = useRef();
 
   const getImageSource = () => {
     const genders = ['women', 'men'];
@@ -25,9 +23,14 @@ const Sidebar = () => {
     return baseURL;
   };
 
+  const handleNavLinkClick = () => {
+    sectionRef.current.scrollIntoView(true, { behavior: 'smooth' });
+    toggleSidebarVisibility();
+  };
+
   return (
     <>
-      <nav className={sidebarClassName} ref={sidebarRef}>
+      <nav className={sidebarClassName}>
         <button className='sidebar__close-sidebar-button' onClick={toggleSidebarVisibility}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
@@ -41,7 +44,7 @@ const Sidebar = () => {
               exact
               className='sidebar__link'
               activeClassName='sidebar__link--active'
-              onClick={toggleSidebarVisibility}
+              onClick={handleNavLinkClick}
             >
               Home
             </NavLink>
@@ -51,7 +54,7 @@ const Sidebar = () => {
               to='/portfolio'
               className='sidebar__link'
               activeClassName='sidebar__link--active'
-              onClick={toggleSidebarVisibility}
+              onClick={handleNavLinkClick}
             >
               Portfolio
             </NavLink>
@@ -61,7 +64,7 @@ const Sidebar = () => {
               to='/blog'
               className='sidebar__link'
               activeClassName='sidebar__link--active'
-              onClick={toggleSidebarVisibility}
+              onClick={handleNavLinkClick}
             >
               Blog
             </NavLink>
@@ -71,7 +74,7 @@ const Sidebar = () => {
               to='/contact'
               className='sidebar__link'
               activeClassName='sidebar__link--active'
-              onClick={toggleSidebarVisibility}
+              onClick={handleNavLinkClick}
             >
               Contact Me
             </NavLink>

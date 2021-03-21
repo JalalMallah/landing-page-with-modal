@@ -1,10 +1,14 @@
 import React from 'react';
+import { useContext } from 'react';
+import { AppContext } from 'context';
 
 import './Main.scss';
 
 const Main = () => {
+  const { sectionRef } = useContext(AppContext);
+
   return (
-    <main className='main'>
+    <main className='main' ref={sectionRef}>
       <h2 className='main__subtitle'>What is this landing page about? 🤔</h2>
       <p className='main__text'>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut modi officiis iusto iste
