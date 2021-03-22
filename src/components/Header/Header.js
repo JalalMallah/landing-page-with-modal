@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { AppContext } from 'context';
 
 import illustration from 'assets/hero-illustration.svg';
@@ -10,6 +10,15 @@ import './Header.scss';
 
 const Header = () => {
   const { toggleModalVisibility, toggleSidebarVisibility } = useContext(AppContext);
+
+  useEffect(() => {
+    updateCssWithCalculatedVh();
+  }, []);
+
+  function updateCssWithCalculatedVh() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
 
   return (
     <>

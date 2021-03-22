@@ -9,13 +9,26 @@ $secondary-color: #be2edd;
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 40px 20px 180px;
   color: #fff;
   background: url('../../assets/painting.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center bottom;
   background-attachment: fixed;
   text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .header * {
@@ -79,17 +92,6 @@ $secondary-color: #be2edd;
   border-radius: 50%;
   background-color: #fff;
   animation: circle-scroll 2s 3.5s infinite ease;
-}
-
-.header::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 @media screen and (min-width: 640px) and (orientation: landscape) {
