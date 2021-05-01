@@ -2,7 +2,7 @@
 
 [Live Preview](https://jalalmallah.github.io/landing-page-with-modal/) 🚀
 
-> A sample landing page with routing, modal functionality and scroll animation.
+> A sample landing page with routing, sign-up modal pop-up and scroll animation.
 
 ### Tech Stack
 
